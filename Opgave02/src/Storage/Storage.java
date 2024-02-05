@@ -1,6 +1,7 @@
 package Storage;
 
 import Models.Actor;
+import Models.Director;
 import Models.Movie;
 import Models.TVSerie;
 
@@ -21,5 +22,26 @@ public class Storage {
 
     public void addTVSerie(TVSerie serie) {
         series.add(serie);
+    }
+    public void printMedier () {
+        System.out.println("Film:");
+        System.out.println();
+        for (Movie movie : movies) {
+            System.out.print(movie + " ");
+        }
+        System.out.println();
+        for (TVSerie tvSerie : series) {
+            System.out.println(series + " ");
+
+        }
+    }
+    public ArrayList<Movie> filmAfDirector (Director director){
+        ArrayList arrayList = new ArrayList<Movie>();
+        for (Movie movie : movies) {
+            if (movie.getDirector().equals(director)) {
+                arrayList.add(movie);
+            }
+        }
+        return arrayList;
     }
 }

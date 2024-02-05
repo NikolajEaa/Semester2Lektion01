@@ -1,22 +1,25 @@
 package Models;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
-public class Movie {
-    private String title;
+public class Movie extends Medier{
     private int productionYear;
     private Director director;
-    private Genre[] genres;
     private double rating;
-    private ArrayList<Actor> cast;
+
 
     public Movie(String title, int productionYear, Director director, Genre[] genres,
                  double rating, ArrayList<Actor> cast) {
-        this.title = title;
+        super(title, genres, cast);
+
         this.productionYear = productionYear;
         this.director = director;
-        this.genres = genres;
         this.rating = rating;
-        this.cast = cast;
+
+    }
+
+    public Director getDirector() {
+        return director;
     }
 }

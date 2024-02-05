@@ -9,6 +9,8 @@ import java.util.List;
 public class Test {
     public static void main(String[] args) {
         Storage storage = initStorage();
+        storage.printMedier();
+
     }
 
     private static Storage initStorage() {
@@ -48,6 +50,8 @@ public class Test {
         storage.addMovie(starWars);
         storage.addMovie(indy);
         storage.addTVSerie(friends);
+
         return storage;
+
     }
 }

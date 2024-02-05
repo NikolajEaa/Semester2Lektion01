@@ -10,4 +10,9 @@ public class Actor {
         this.name = name;
         this.birthday = birthday;
     }
+
+    @Override
+    public String toString() {
+        return name + " " + birthday;
+    }
 }
